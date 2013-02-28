@@ -9,7 +9,8 @@
   </head>
   <body>
     <svg>
-      <g class="catgirl">
+      <rect id="rainbow" x="0" y="0" style="fill:url(#radialRainbow)"/>
+      <g id="catgirl">
         <image xlink:href="1.png" x="0" y="0" width="1" height="1" clip-path="url(#catgirl-clip)"/>
         <image xlink:href="2.png" x="0" y="0" width="1" height="1" clip-path="url(#catgirl-clip)"/>
       </g>
@@ -18,6 +19,20 @@
         <clipPath id="catgirl-clip" clipPathUnits="objectBoundingBox">
           <use xlink:href="#catgirl-clip-rect"/>
         </clipPath>
+        <linearGradient id="linearRainbow">
+          <stop style="stop-color: #000000;" offset="0"/>
+          <stop style="stop-color: #000000;" offset="0.405"/>
+          <stop style="stop-color: #4510d3;" offset="0.497"/>
+          <stop style="stop-color: #404091;" offset="0.566"/>
+          <stop style="stop-color: #0b95f4;" offset="0.623"/>
+          <stop style="stop-color: #39ba1c;" offset="0.676"/>
+          <stop style="stop-color: #ebf50a;" offset="0.732"/>
+          <stop style="stop-color: #f38500;" offset="0.775"/>
+          <stop style="stop-color: #e30000;" offset="0.825"/>
+          <stop style="stop-color: #000000;" offset="0.881"/>
+          <stop style="stop-color: #000000;" offset="1"/>
+        </linearGradient>
+        <radialGradient id="radialRainbow" xlink:href="#linearRainbow"/>
       </defs>
     </svg>
   </body>
